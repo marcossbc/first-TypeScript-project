@@ -14,7 +14,108 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bookmarks: {
+        Row: {
+          arabic_text: string | null
+          ayah: number | null
+          created_at: string | null
+          dua_id: string | null
+          id: string
+          surah: number | null
+          translation: string | null
+          type: string
+          user_id: string
+        }
+        Insert: {
+          arabic_text?: string | null
+          ayah?: number | null
+          created_at?: string | null
+          dua_id?: string | null
+          id?: string
+          surah?: number | null
+          translation?: string | null
+          type: string
+          user_id: string
+        }
+        Update: {
+          arabic_text?: string | null
+          ayah?: number | null
+          created_at?: string | null
+          dua_id?: string | null
+          id?: string
+          surah?: number | null
+          translation?: string | null
+          type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ducooyin: {
+        Row: {
+          audio_url: string | null
+          category: string | null
+          created_at: string | null
+          id: string
+          text_ar: string
+          text_en: string | null
+          text_so: string | null
+          title: string
+        }
+        Insert: {
+          audio_url?: string | null
+          category?: string | null
+          created_at?: string | null
+          id?: string
+          text_ar: string
+          text_en?: string | null
+          text_so?: string | null
+          title: string
+        }
+        Update: {
+          audio_url?: string | null
+          category?: string | null
+          created_at?: string | null
+          id?: string
+          text_ar?: string
+          text_en?: string | null
+          text_so?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          created_at: string | null
+          default_translation: string | null
+          font_size: number | null
+          id: string
+          reciter: string | null
+          theme: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          default_translation?: string | null
+          font_size?: number | null
+          id?: string
+          reciter?: string | null
+          theme?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          default_translation?: string | null
+          font_size?: number | null
+          id?: string
+          reciter?: string | null
+          theme?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
